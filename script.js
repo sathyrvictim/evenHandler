@@ -67,5 +67,5 @@ const btnKeys = document.querySelector('#btnKeys');
 
     textBox.addEventListener('keyup', (e)=>{
         const textEvent = document.querySelector('.keyEvent');
-        textEvent.textContent = `You pressed ${e.key} / ${e.code}`
-    })
+        textEvent.textContent = `You pressed ${e.key} / ${e.code}`;
+    });
