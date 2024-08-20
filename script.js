@@ -1,5 +1,5 @@
 const btnOne = document.querySelector('#btnOne');
-const btnKeys = document.querySelector('.btnKeys');
+const btnKeys = document.querySelector('#btnKeys');
 
     btnOne.addEventListener('contextmenu', (e)=>{
         e.preventDefault();
@@ -40,23 +40,16 @@ const btnKeys = document.querySelector('.btnKeys');
         if (e.ctrlKey) keys.push('Ctrl');
         if (e.altKey) keys.push('Alt');
         if (e.metaKey) keys.push('Window');
-        if (e.button == mouseKey) keys.push('Mouse key');
-
-        
-
-        switch (e.button) {
-            case 0:
-                keys.push('Mouse Left');
-                break;
-            case 1:
-                keys.push('Mouse Middle');
-                break;
-            case 2:
-                keys.push('Mouse Right');
-                break;
-            }
+        if (e.button === 0 ) keys.push('Left Mouse');
 
             logTwo.textContent = `U pressed: ${keys.join('+')} key`;
         
     });
 
+
+    const track = document.querySelector('#track');
+
+    track.addEventListener('mousemove', (e)=>{
+        track.innerHTML = `Position Client X/Y: ${e.clientX}, ${e.clientY}`
+    
+    })
