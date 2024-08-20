@@ -8,7 +8,7 @@ const btnKeys = document.querySelector('#btnKeys');
     btnKeys.addEventListener('contextmenu', (e)=>{
         e.preventDefault();
     });
-    
+
     btnOne.addEventListener('mouseup', (e) => {
         let logOne = document.querySelector('#logOne');
         switch (e.button) {
@@ -54,3 +54,18 @@ const btnKeys = document.querySelector('#btnKeys');
                             Position Screen X/Y: ${e.screenX}, ${e.clientY}`;
     
     });
+
+
+    const textBox = document.querySelector('#message');
+
+    textBox.setAttribute('style', 'background-color: red;')
+    
+    textBox.addEventListener('contextmenu', (e)=>{
+        e.preventDefault();
+    });
+
+
+    textBox.addEventListener('keyup', (e)=>{
+        const textEvent = document.querySelector('.keyEvent');
+        textEvent.textContent = `You pressed ${e.key} / ${e.code}`
+    })
