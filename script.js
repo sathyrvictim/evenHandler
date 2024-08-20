@@ -8,7 +8,7 @@ const btnKeys = document.querySelector('#btnKeys');
     btnKeys.addEventListener('contextmenu', (e)=>{
         e.preventDefault();
     });
-
+    
     btnOne.addEventListener('mouseup', (e) => {
         let logOne = document.querySelector('#logOne');
         switch (e.button) {
@@ -50,6 +50,7 @@ const btnKeys = document.querySelector('#btnKeys');
     const track = document.querySelector('#track');
 
     track.addEventListener('mousemove', (e)=>{
-        track.innerHTML = `Position Client X/Y: ${e.clientX}, ${e.clientY}`
+        track.innerHTML = `Position Client X/Y: ${e.clientX}, ${e.clientY} <br>
+                            Position Screen X/Y: ${e.screenX}, ${e.clientY}`;
     
-    })
+    });
